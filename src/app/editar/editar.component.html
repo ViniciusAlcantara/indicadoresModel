@@ -1,0 +1,73 @@
+<div>
+  <hr>
+  <mat-dialog-content>
+<mat-card>
+  <div class="container">
+    <form class="example-form" [formGroup]="myform" (ngSubmit)="salvarRegistro(myform.value)">
+      <mat-form-field class="example-full-width">
+        <input  name="dataIntegracao" formControlName="dataIntegracao" matInput placeholder="Data Integracao">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="dataUltAlteracao" formControlName="dataUltAlteracao" matInput placeholder="Última Alteração">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="formulaCalculo" formControlName="formulaCalculo" matInput placeholder="Fórmula Cálculo">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="idDrgIntegracao" formControlName="idDrgIntegracao"  matInput placeholder="id Integração">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="identDirecaoSeta" formControlName="identDirecaoSeta"  matInput placeholder="Direção Seta">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="identPeriodicidade" formControlName="identPeriodicidade"  matInput placeholder="Periodicidade">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="identReferencial" formControlName="identReferencial"  matInput placeholder="Referencial">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="informações Adicionais" formControlName="informacoesAdicionais"  matInput placeholder="Informações Adicionais">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="nome" formControlName="nome"  matInput placeholder="Nome">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="numDecimais" formControlName="numDecimais"  matInput placeholder="Decimais">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="objetivo" formControlName="objetivo"  matInput placeholder="Objetivo">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="unidade" formControlName="unidade"  matInput placeholder="Unidade">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="usuarioUltAlteracao" formControlName="usuarioUltAlteracao"  matInput placeholder="Usuário Última Alteração">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="versao" formControlName="versao"  matInput placeholder="Versão">
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button color="primary">Salvar</button>
+
+    </form>
+  </div>
+</mat-card>
+  </mat-dialog-content>
+  <hr>
+  <mat-dialog-actions>
+    <button mat-raised-button matDialogClose>Cancelar</button>
+  </mat-dialog-actions>
+</div>

@@ -1,0 +1,86 @@
+$mat-header-row-height: 36px;
+$mat-row-height: 28px;
+$mat-row-horizontal-padding: 4px;
+
+/**
+ * Flex-based table structure
+ */
+.mat-table {
+  display: block;
+  overflow-x: auto;
+}
+
+.mat-header-row {
+  min-height: $mat-header-row-height;
+}
+
+.mat-row {
+  min-height: $mat-row-height;
+}
+
+.mat-row, .mat-header-row {
+  display: flex;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  align-items: center;
+  box-sizing: border-box;
+
+  // Workaround for https://goo.gl/pFmjJD in IE 11. Adds a pseudo
+  // element that will stretch the row the correct height. See:
+  // https://connect.microsoft.com/IE/feedback/details/802625
+  &::after {
+    display: inline-block;
+    min-height: inherit;
+    content: '';
+  }
+}
+
+.mat-cell:first-child, .mat-header-cell:first-child {
+  padding-left: $mat-row-horizontal-padding;
+}
+
+.mat-cell:last-child, .mat-header-cell:last-child {
+  padding-right: $mat-row-horizontal-padding;
+}
+
+.mat-cell, .mat-header-cell {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  word-wrap: break-word;
+  min-height: inherit;
+}
+
+/**
+ * Native HTML table structure
+ */
+table.mat-table {
+  border-spacing: 0;
+}
+
+tr.mat-header-row {
+  height: $mat-header-row-height;
+}
+
+tr.mat-row {
+  height: $mat-row-height;
+}
+
+th.mat-header-cell {
+  text-align: left;
+}
+
+th.mat-header-cell, td.mat-cell {
+  padding: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+th.mat-header-cell:first-child, td.mat-cell:first-child {
+  padding-left: $mat-row-horizontal-padding;
+}
+
+th.mat-header-cell:last-child, td.mat-cell:last-child {
+  padding-right: $mat-row-horizontal-padding;
+}

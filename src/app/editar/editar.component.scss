@@ -1,0 +1,70 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.tabs-display{
+  width: 50%;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.perfil-container{
+  width: 20%;
+  float: left;
+}
+.perfil-container img {
+  padding-left: 10%;
+  margin: 10px 0 10px 0;
+  height: 70%;
+  width: 70%;
+  display:block;
+}
+.example-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+.example-container > * {
+  width: 100%;
+}
+.menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%  !important;
+}
+
+.user-avatar{
+  padding-top: 15%;
+  padding-left: 10%;
+  margin: 10px 0 10px 0;
+  height: 30%;
+  width: 30%;
+  display:block;
+}
+.container .paciente-container{
+  width: 100%;
+}
+.example-full-width {
+  width: 100%;
+}
+h4{
+  color: #009688;
+}

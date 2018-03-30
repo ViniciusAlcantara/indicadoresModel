@@ -1,0 +1,87 @@
+<mat-card>
+  <div class="container">
+    <form class="example-form" [formGroup]="myform" (ngSubmit)="salvarRegistro(myform.value)">
+      <mat-form-field class="example-full-width">
+        <input  name="dataIntegracao" formControlName="dataIntegracao" matInput placeholder="Data Integracao">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="dataUltAlteracao" formControlName="dataUltAlteracao" matInput placeholder="Última Alteração">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="formulaCalculo" formControlName="formulaCalculo" matInput placeholder="Fórmula Cálculo">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="idDrgIntegracao" formControlName="idDrgIntegracao"  matInput placeholder="id Integração">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="identDirecaoSeta" formControlName="identDirecaoSeta"  matInput placeholder="Direção Seta">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="identPeriodicidade" formControlName="identPeriodicidade"  matInput placeholder="Periodicidade">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="identReferencial" formControlName="identReferencial"  matInput placeholder="Referencial">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="informações Adicionais" formControlName="informacoesAdicionais"  matInput placeholder="Informações Adicionais">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="nome" formControlName="nome"  matInput placeholder="Nome">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="numDecimais" formControlName="numDecimais"  matInput placeholder="Decimais">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="objetivo" formControlName="objetivo"  matInput placeholder="Objetivo">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="unidade" formControlName="unidade"  matInput placeholder="Unidade">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="usuarioUltAlteracao" formControlName="usuarioUltAlteracao"  matInput placeholder="Usuário Última Alteração">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input name="versao" formControlName="versao"  matInput placeholder="Versão">
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button color="primary">Salvar</button>
+
+    </form>
+  </div>
+</mat-card>
+
+<mat-card>
+  <div class="mat-table">
+    <div class="mat-header-row">
+      <div class="mat-header-cell"> Id </div>
+      <div class="mat-header-cell"> Nome </div>
+      <div class="mat-header-cell"> Objetivo </div>
+      <div class="mat-header-cell"> Versão </div>
+      <div class="mat-header-cell"> Ações </div>
+    </div>
+    <div class="mat-row" *ngFor="let element of elements;">
+      <div class="mat-cell"> {{element.id}} </div>
+      <div class="mat-cell"> {{element.nome}} </div>
+      <div class="mat-cell"> {{element.objetivo}} </div>
+      <div class="mat-cell"> {{element.versao}} </div>
+      <div class="mat-cell">
+        <button mat-raised-button color="primary" (click)="visualizar(element)">Visualizar</button>
+        <button mat-raised-button color="primary" (click)="editar(element)">Editar</button>
+        <button mat-raised-button color="primary" (click)="excluir(element.id)">Excluir</button>
+      </div>
+    </div>
+  </div>
+</mat-card>
